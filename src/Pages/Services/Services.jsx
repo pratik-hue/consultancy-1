@@ -4,6 +4,7 @@ import DefaultLayout from "../../Components/DefaultLayout";
 import student1 from "../../assets/student1.jpg";
 import work from "../../assets/work.jpg";
 import couple from "../../assets/couple.jpg";
+import examBanner from "../../assets/servicebanner.jpg"; // Adjust the path as needed
 
 import family from "../../assets/family.jpg";
 const services = [
@@ -41,11 +42,19 @@ const Services = () => {
   return (
 <DefaultLayout>
 {/* Hero Section */}
-      <section className="relative bg-[url('https://source.unsplash.com/1600x900/?services,travel')] bg-cover bg-center h-80 flex items-center justify-center">
-        <div className="bg-black/60 w-full h-full absolute top-0 left-0"></div>
-        <h1 className="text-4xl font-bold text-white z-10">Our Services</h1>
-      </section>
-
+      <div className="relative h-[350px] flex items-center justify-center">
+        <img
+          src={examBanner}
+          alt="Exams Background"
+          className="absolute inset-0 w-full h-full object-cover brightness-50"
+        />
+        <div className="relative text-center text-white px-6">
+          <h1 className="text-4xl font-bold">Unlock Your Potential with the Right Exam</h1>
+          <p className="text-lg mt-3 max-w-2xl mx-auto">
+            Choose the exam that suits your goals and take a step closer to success.
+          </p>
+        </div>
+      </div>
       {/* Services Section */}
       <section className="py-16 bg-gray-100">
         <div className="max-w-7xl mx-auto px-6">
@@ -82,7 +91,7 @@ const Services = () => {
       </section>
 
       {/* Call-to-Action Section */}
-      <section className="py-16 bg-blue-600 text-white text-center">
+      <section className="py-16 bg-gray-100 text-center">
         <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-bold">Get In Touch with Our Experts</h2>
           <p className="mt-4 text-lg">

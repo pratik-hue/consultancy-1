@@ -22,15 +22,17 @@ const Navbar = () => {
             <Link to="/services" className="text-gray-700 hover:text-blue-600">Services</Link>
             <Link to="/about" className="text-gray-700 hover:text-blue-600">About</Link>
             <Link to="/contact" className="text-gray-700 hover:text-blue-600">Contact</Link>
+            <Link to="/exams" className="text-gray-700 hover:text-blue-600">Exams</Link>
+
           </div>
 
           {/* Contact Button */}
           <div className="hidden md:block">
             <Link
-              to="/consultation"
+              to="/Auth"
               className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
             >
-              Get Consultation
+              Signin
             </Link>
           </div>
 

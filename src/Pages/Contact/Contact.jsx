@@ -4,15 +4,8 @@ import DefaultLayout from "../../Components/DefaultLayout";
 const Contact = () => {
   return (
     <DefaultLayout>
-
-      {/* Hero Section */}
-      <section className="relative bg-[url('https://source.unsplash.com/1600x900/?office,contact')] bg-cover bg-center h-80 flex items-center justify-center">
-        <div className="bg-black/60 w-full h-full absolute top-0 left-0"></div>
-        <h1 className="text-4xl font-bold text-white z-10">Contact Us</h1>
-      </section>
-
       {/* Contact Information */}
-      <section className="py-16 bg-gray-100">
+      <section className="py-25 bg-gray-100">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-gray-800">Get in Touch</h2>
           <p className="text-gray-600 mt-4">
@@ -36,21 +29,46 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Contact Form */}
-      <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center text-gray-800">Send Us a Message</h2>
-          <form className="mt-8 bg-gray-100 p-8 rounded-lg shadow-md">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <input type="text" placeholder="Full Name" className="p-3 rounded-lg w-full border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" required />
-              <input type="email" placeholder="Email Address" className="p-3 rounded-lg w-full border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" required />
-            </div>
-            <input type="text" placeholder="Subject" className="p-3 mt-4 rounded-lg w-full border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500" required />
-            <textarea placeholder="Your Message" className="p-3 mt-4 rounded-lg w-full border-gray-300 h-32 focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
-            <button type="submit" className="mt-6 w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">Send Message</button>
-          </form>
-        </div>
-      </section>
+    {/* Contact Form */}
+<section className="py-16 bg-white">
+  <div className="max-w-4xl mx-auto px-6">
+    <h2 className="text-3xl font-bold text-center text-gray-800">Send Us a Message</h2>
+    <form className="mt-8 bg-gray-100 p-8 rounded-lg shadow-md">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <input 
+          type="text" 
+          placeholder="Full Name" 
+          className="p-3 rounded-lg w-full border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+          required 
+        />
+        <input 
+          type="email" 
+          placeholder="Email Address" 
+          className="p-3 rounded-lg w-full border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+          required 
+        />
+      </div>
+      <input 
+        type="text" 
+        placeholder="Subject" 
+        className="p-3 mt-4 rounded-lg w-full border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+        required 
+      />
+      <textarea 
+        placeholder="Your Message" 
+        className="p-3 mt-4 rounded-lg w-full border border-gray-400 h-32 focus:outline-none focus:ring-2 focus:ring-blue-500" 
+        required
+      ></textarea>
+      <button 
+        type="submit" 
+        className="mt-6 w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300"
+      >
+        Send Message
+      </button>
+    </form>
+  </div>
+</section>
+
 
       {/* Google Map Embed */}
       <section className="py-16 bg-gray-100">
