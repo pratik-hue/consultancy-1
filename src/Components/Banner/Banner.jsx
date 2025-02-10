@@ -1,27 +1,33 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const Banner = () => {
   return (
-    <div className="relative bg-cover bg-center h-[500px] flex items-center justify-center text-center text-white"
-      style={{ backgroundImage: "url('https://source.unsplash.com/1600x900/?travel,passport')" }}>
+    <div className="relative bg-white h-[500px] md:h-[600px] flex items-center justify-center text-center text-gray-800 overflow-hidden shadow-md">
       
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
-
       {/* Content */}
-      <div className="relative z-10 max-w-3xl px-6">
-        <h1 className="text-4xl md:text-5xl font-bold">
-          Your Trusted Visa Consultancy Partner
+      <motion.div 
+        className="relative z-10 max-w-3xl px-6"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <h1 className="text-4xl md:text-5xl font-extrabold text-blue-600 drop-shadow-lg">
+          Hassle-Free Visa Consultancy Services
         </h1>
-        <p className="mt-4 text-lg text-gray-200">
-          Get expert guidance on visa applications, immigration services, and travel consultancy.
+        <p className="mt-4 text-lg text-gray-700">
+          Simplifying visa applications, immigration processes, and travel solutions with expert guidance.
         </p>
         <Link to="/services">
-          <button className="mt-6 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-md transition">
+          <motion.button 
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            className="mt-6 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg transition-transform"
+          >
             Explore Services
-          </button>
+          </motion.button>
         </Link>
-      </div>
+      </motion.div>
     </div>
   );
 };

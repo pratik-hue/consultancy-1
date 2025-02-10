@@ -1,34 +1,38 @@
 import React from "react";
 import { FaGraduationCap, FaBriefcase, FaPassport, FaPlaneDeparture } from "react-icons/fa";
 import DefaultLayout from "../../Components/DefaultLayout";
+import student1 from "../../assets/student1.jpg";
+import work from "../../assets/work.jpg";
+import couple from "../../assets/couple.jpg";
 
+import family from "../../assets/family.jpg";
 const services = [
   {
     title: "Student Visa Assistance",
     description:
       "We assist students in fulfilling their dreams of studying abroad by navigating the complex visa process with ease.",
-    image: "https://source.unsplash.com/600x400/?students,university",
+    image: student1,
     icon: <FaGraduationCap className="text-4xl text-blue-600" />,
   },
   {
     title: "Work Visa Solutions",
     description:
       "Whether you're looking for new opportunities or a career abroad, we provide expert consultation for work visa applications.",
-    image: "https://source.unsplash.com/600x400/?business,work",
+    image: work,
     icon: <FaBriefcase className="text-4xl text-green-600" />,
   },
   {
     title: "PR & Immigration Consultancy",
     description:
       "Our consultancy services help you through the immigration process, offering the best advice for permanent residency.",
-    image: "https://source.unsplash.com/600x400/?passport,travel",
-    icon: <FaPassport className="text-4xl text-yellow-500" />,
+      image: couple,
+      icon: <FaPassport className="text-4xl text-yellow-500" />,
   },
   {
     title: "Tourist & Business Visas",
     description:
       "We offer efficient assistance for obtaining tourist and business visas, making international travel easier for you.",
-    image: "https://source.unsplash.com/600x400/?travel,airport",
+    image: family,
     icon: <FaPlaneDeparture className="text-4xl text-red-500" />,
   },
 ];

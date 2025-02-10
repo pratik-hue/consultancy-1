@@ -1,29 +1,34 @@
 import { motion } from "framer-motion";
+import student1 from "../../assets/student1.jpg";
+import work from "../../assets/work.jpg";
+import couple from "../../assets/couple.jpg";
+
+import family from "../../assets/family.jpg";
 
 const services = [
   {
     id: 1,
     title: "Student Visa",
     description: "Get expert guidance for your student visa application and study abroad.",
-    image: "https://source.unsplash.com/400x300/?students,graduation",
+    image: student1,
   },
   {
     id: 2,
     title: "Work Visa",
     description: "We help professionals secure work visas and job placements globally.",
-    image: "https://source.unsplash.com/400x300/?work,office",
+    image: work,
   },
   {
     id: 3,
     title: "Tourist Visa",
     description: "Plan your dream vacation with our hassle-free tourist visa services.",
-    image: "https://source.unsplash.com/400x300/?travel,destination",
+    image: couple,
   },
   {
     id: 4,
     title: "Permanent Residency",
     description: "Migrate with ease! We assist with PR applications for various countries.",
-    image: "https://source.unsplash.com/400x300/?city,immigration",
+    image: family,
   },
 ];
 
