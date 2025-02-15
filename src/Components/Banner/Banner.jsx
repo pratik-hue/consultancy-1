@@ -1,7 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import banner from "../../assets/banner111.png";
@@ -14,10 +13,9 @@ const Banner = () => {
   return (
     <div className="relative bg-gray-900 h-[500px] md:h-[500px] flex items-center justify-center text-center text-white overflow-hidden shadow-lg rounded-lg mt-16">
       <Swiper
-        modules={[Navigation, Pagination, Autoplay]}
+        modules={[Pagination, Autoplay]}
         spaceBetween={30}
         slidesPerView={1}
-        navigation
         pagination={{ clickable: true }}
         autoplay={{ delay: 3000, disableOnInteraction: false }}
         className="w-full h-full"
@@ -33,9 +31,7 @@ const Banner = () => {
         ))}
       </Swiper>
 
-      {/* Simple Navigation Arrows */}
-      <div className="swiper-button-prev text-white text-2xl opacity-70"></div>
-      <div className="swiper-button-next text-white text-2xl opacity-70"></div>
+
     </div>
   );
 };
