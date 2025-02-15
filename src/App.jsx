@@ -5,13 +5,13 @@ import About from './Pages/About/About';
 import Contact from './Pages/Contact/Contact';
 import Services from './Pages/Services/Services';
 import Exams from './Pages/Exams';
-import ExamDetail from './Components/ExamDetail';
-import Chatbot from './Components/Chatbot';
+import ExamDetail from './Components/Exams/ExamDetail';
+import Chatbot from './Components/Chatbot/Chatbot';
 import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./Components/ProtectedRoute";
 
 import Dashboard from './Components/Dashboard';
-import AuthForm from './Pages/AuthForm';
+import AuthForm from './Pages/Auth/AuthForm';
 
 function App() {
 

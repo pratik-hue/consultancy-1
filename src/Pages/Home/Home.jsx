@@ -1,18 +1,17 @@
 import Banner from "../../Components/Banner/Banner";
-import Cards from "../../Components/Cards/Cards";
 import DefaultLayout from "../../Components/DefaultLayout";
 import Destinations from "../../Components/Destinations/Destinations";
+import ServiceCards from "../../Components/ServiceCards/ServiceCards";
 
-import Testimonials from "../../Components/Testimonials/Testimonials";
+import Testimonials from "../../Components/Testimonials";
 import Whychoose from "../../Components/Whychoose";
 
 const Home = () => {
   return (
     <div>
       <DefaultLayout>
-      
       <Banner/>
-      <Cards/>
+      <ServiceCards/>
       <Destinations/>
       <Whychoose/>
       <Testimonials/>

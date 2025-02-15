@@ -4,7 +4,7 @@ import banner from "../../assets/banner111.png";
 
 const Banner = () => {
   return (
-    <div className="relative bg-white h-[500px] md:h-[500px] flex items-center justify-center text-center text-gray-800 overflow-hidden shadow-md">
+    <div className="relative bg-white h-[500px] md:h-[600px] flex items-center justify-center text-center text-gray-800 overflow-hidden shadow-md">
               <img
                 src={banner}
                 alt=""

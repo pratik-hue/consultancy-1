@@ -1,26 +1,24 @@
 import React from "react";
+import { motion } from "framer-motion";
 import DefaultLayout from "../../Components/DefaultLayout";
-import { FaGlobe, FaCheckCircle, FaHeadset, FaUsers } from "react-icons/fa";
+import { FaGlobe, FaCheckCircle, FaHeadset } from "react-icons/fa";
 import examBanner from "../../assets/about.jpg"; // Adjust the path as needed
 import we from "../../assets/we.jpg"; // Adjust the path as needed
-
-
 
 const About = () => {
   return (
     <DefaultLayout>
-
       {/* Hero Section */}
       <div className="relative h-[350px] flex items-center justify-center">
         <img
           src={examBanner}
-          alt="Exams Background"
+          alt="About Us Background"
           className="absolute inset-0 w-full h-full object-cover brightness-50"
         />
         <div className="relative text-center text-white px-6">
-          <h1 className="text-4xl font-bold">Unlock Your Potential with the Right Exam</h1>
-          <p className="text-lg mt-3 max-w-2xl mx-auto">
-            Choose the exam that suits your goals and take a step closer to success.
+          <h1 className="text-4xl font-bold">Your Trusted Partner for Global Opportunities</h1>
+          <p className="text-lg mt-3 max-w-3xl mx-auto">
+            We provide expert visa consultancy services to help you study, work, and settle abroad effortlessly. Let us guide you towards a successful future.
           </p>
         </div>
       </div>
@@ -28,7 +26,12 @@ const About = () => {
       {/* Company Overview */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-          <div data-aos="fade-right">
+          <motion.div
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
             <h2 className="text-4xl font-bold text-gray-800">Who We Are</h2>
             <p className="text-gray-600 mt-4 leading-relaxed text-lg">
               We are a leading visa consultancy, helping individuals and families achieve their dreams of studying, working, and settling abroad. Our dedicated experts provide a smooth and hassle-free application process for various visa categories.
@@ -36,11 +39,15 @@ const About = () => {
             <button className="mt-6 bg-blue-600 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-700 transition transform hover:scale-105">
               Learn More
             </button>
-          </div>
-          <img
+          </motion.div>
+          <motion.img
             src={we}
             alt="Consultancy Team"
             className="rounded-lg shadow-lg hover:shadow-2xl transition w-full h-auto"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
           />
         </div>
       </section>
@@ -67,59 +74,65 @@ const About = () => {
                 icon: <FaHeadset className="text-red-500 text-5xl mx-auto mb-4" />,
               },
             ].map((item, index) => (
-              <div
+              <motion.div
                 key={index}
                 className="bg-gray-100 p-8 rounded-lg shadow-md text-center hover:shadow-xl transition transform hover:scale-105"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                viewport={{ once: true }}
               >
                 {item.icon}
                 <h3 className="text-2xl font-semibold text-gray-700">{item.title}</h3>
                 <p className="text-gray-600 mt-2">{item.description}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-     {/* Meet Our Team */}
-<section className="py-16 bg-gray-50">
-  <div className="max-w-7xl mx-auto px-6">
-    <h2 className="text-4xl font-bold text-center text-gray-800">Meet Our Team</h2>
-    <div className="grid md:grid-cols-3 gap-10 mt-12">
-      {[
-        {
-          name: "John Doe",
-          role: "Founder & Visa Consultant",
-          image: "https://i.pravatar.cc/200?img=12", // High-quality avatar
-        },
-        {
-          name: "Jane Smith",
-          role: "Immigration Expert",
-          image: "https://i.pravatar.cc/200?img=47",
-        },
-        {
-          name: "Michael Lee",
-          role: "Senior Consultant",
-          image: "https://i.pravatar.cc/200?img=33",
-        },
-      ].map((member, index) => (
-        <div
-          key={index}
-          className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition transform hover:scale-105"
-        >
-          <img
-            src={member.image}
-            alt={member.name}
-            className="mx-auto rounded-full w-40 h-40 object-cover border-4 border-white shadow-md"
-          />
-          <h3 className="text-2xl font-semibold text-gray-700 mt-4">{member.name}</h3>
-          <p className="text-gray-600">{member.role}</p>
+      {/* Meet Our Team */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center text-gray-800">Meet Our Team</h2>
+          <div className="grid md:grid-cols-3 gap-10 mt-12">
+            {[
+              {
+                name: "John Doe",
+                role: "Founder & Visa Consultant",
+                image: "https://i.pravatar.cc/200?img=12", // High-quality avatar
+              },
+              {
+                name: "Jane Smith",
+                role: "Immigration Expert",
+                image: "https://i.pravatar.cc/200?img=47",
+              },
+              {
+                name: "Michael Lee",
+                role: "Senior Consultant",
+                image: "https://i.pravatar.cc/200?img=33",
+              },
+            ].map((member, index) => (
+              <motion.div
+                key={index}
+                className="text-center p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition transform hover:scale-105"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                viewport={{ once: true }}
+              >
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="mx-auto rounded-full w-40 h-40 object-cover border-4 border-white shadow-md"
+                />
+                <h3 className="text-2xl font-semibold text-gray-700 mt-4">{member.name}</h3>
+                <p className="text-gray-600">{member.role}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
-
-
+      </section>
     </DefaultLayout>
   );
 };

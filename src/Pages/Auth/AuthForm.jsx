@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { useAuth } from "../context/AuthContext"; // Ensure the correct import path
+import { useAuth } from "../../context/AuthContext"; // Ensure the correct import path
 import { useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa"; // Import eye icons
-import DefaultLayout from "../Components/DefaultLayout";
+import DefaultLayout from "../../Components/DefaultLayout";
 
 const AuthForm = () => {
   const [isLogin, setIsLogin] = useState(true);

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import DefaultLayout from "../Components/DefaultLayout";
 import { FaArrowRight } from "react-icons/fa";
 
@@ -8,8 +9,7 @@ import ielts from "../assets/ielts.png";
 import toefl from "../assets/toefl.jpg";
 import gre from "../assets/gre.jpg";
 import sat from "../assets/sat.jpg";
-import examBanner from "../assets/exam.jpg"; // Add a banner image for default view
-
+import examBanner from "../assets/exam.jpg";
 
 const exams = [
   {
@@ -42,6 +42,15 @@ const exams = [
   },
 ];
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (index) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, delay: index * 0.2 },
+  }),
+};
+
 const Exams = () => {
   return (
     <DefaultLayout>
@@ -71,25 +80,34 @@ const Exams = () => {
 
         {/* Grid Layout */}
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
-          {exams.map((exam) => (
-            <Link
-              to={exam.link}
+          {exams.map((exam, index) => (
+            <motion.div
               key={exam.id}
-              className="relative group bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300"
+              variants={cardVariants}
+              initial="hidden"
+              animate="visible"
+              custom={index}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
             >
-              <img
-                src={exam.image}
-                alt={exam.name}
-                className="w-full h-56 object-cover group-hover:scale-105 transition-all duration-300"
-              />
-              <div className="p-6">
-                <h3 className="text-2xl font-semibold text-gray-800">{exam.name}</h3>
-                <p className="text-gray-600 mt-2">{exam.description}</p>
-                <div className="mt-4 flex items-center text-blue-600 font-medium">
-                  Learn More <FaArrowRight className="ml-2" />
+              <Link
+                to={exam.link}
+                className="relative group bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-2xl transition-all duration-300"
+              >
+                <img
+                  src={exam.image}
+                  alt={exam.name}
+                  className="w-full h-56 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-2xl font-semibold text-gray-800">{exam.name}</h3>
+                  <p className="text-gray-600 mt-2">{exam.description}</p>
+                  <div className="mt-4 flex items-center text-blue-600 font-medium">
+                    Learn More <FaArrowRight className="ml-2" />
+                  </div>
                 </div>
-              </div>
-            </Link>
+              </Link>
+            </motion.div>
           ))}
         </div>
       </div>

@@ -1,13 +1,13 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import DefaultLayout from "../Components/DefaultLayout";
+import DefaultLayout from "../DefaultLayout";
 import { FaCheckCircle, FaBookOpen, FaCalendarAlt, FaUserGraduate, FaClock } from "react-icons/fa";
 
 // Import images
-import ielts from "../assets/ielts.png";
-import toefl from "../assets/toefl.jpg";
-import gre from "../assets/gre.jpg";
-import sat from "../assets/sat.jpg";
+import ielts from "../../assets/ielts.png";
+import toefl from "../../assets/toefl.jpg";
+import gre from "../../assets/gre.jpg";
+import sat from "../../assets/sat.jpg";
 
 const exams = {
     ielts: {
@@ -251,7 +251,7 @@ const ExamDetail = () => {
         {/* Call to Action */}
         <div className="mt-12 text-center">
           <a href="/register" className="px-6 py-3 bg-blue-600 text-white text-lg rounded-lg shadow-lg">
-            Register for {exam.title}
+            Register Now
           </a>
         </div>
       </div>
