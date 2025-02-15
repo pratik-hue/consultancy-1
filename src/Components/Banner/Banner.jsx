@@ -12,7 +12,7 @@ const Banner = () => {
   const images = [banner, banner1, banner2];
 
   return (
-    <div className="relative bg-gray-900 h-[500px] md:h-[500px] flex items-center justify-center text-center text-white overflow-hidden shadow-lg rounded-lg">
+    <div className="relative bg-gray-900 h-[500px] md:h-[500px] flex items-center justify-center text-center text-white overflow-hidden shadow-lg rounded-lg mt-16">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={30}
