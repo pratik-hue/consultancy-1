@@ -1,37 +1,41 @@
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 import banner from "../../assets/banner111.png";
+import banner1 from "../../assets/banner2.png";
+import banner2 from "../../assets/banner3.jpeg";
 
 const Banner = () => {
+  const images = [banner, banner1, banner2];
+
   return (
-    <div className="relative bg-white h-[500px] md:h-[500px] flex items-center justify-center text-center text-gray-800 overflow-hidden shadow-md">
-              <img
-                src={banner}
-                alt=""
-              />
-      {/* Content */}
-      {/* <motion.div 
-        className="relative z-10 max-w-3xl px-6"
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
+    <div className="relative bg-gray-900 h-[500px] md:h-[500px] flex items-center justify-center text-center text-white overflow-hidden shadow-lg rounded-lg">
+      <Swiper
+        modules={[Navigation, Pagination, Autoplay]}
+        spaceBetween={30}
+        slidesPerView={1}
+        navigation
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        className="w-full h-full"
       >
-        <h1 className="text-4xl md:text-5xl font-extrabold text-blue-600 drop-shadow-lg">
-          Hassle-Free Visa Consultancy Services
-        </h1>
-        <p className="mt-4 text-lg text-gray-700">
-          Simplifying visa applications, immigration processes, and travel solutions with expert guidance.
-        </p>
-        <Link to="/services">
-          <motion.button 
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            className="mt-6 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg shadow-lg transition-transform"
-          >
-            Explore Services
-          </motion.button>
-        </Link>
-      </motion.div> */}
+        {images.map((img, index) => (
+          <SwiperSlide key={index} className="relative">
+            <img
+              src={img}
+              alt={`Banner ${index}`}
+              className="w-full h-full object-cover rounded-lg brightness-75"
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+
+      {/* Simple Navigation Arrows */}
+      <div className="swiper-button-prev text-white text-2xl opacity-70"></div>
+      <div className="swiper-button-next text-white text-2xl opacity-70"></div>
     </div>
   );
 };

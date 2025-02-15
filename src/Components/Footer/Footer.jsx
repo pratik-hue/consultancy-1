@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div>
-            <h2 className="text-xl font-semibold">VisaPro Consultancy</h2>
+            <h2 className="text-xl font-semibold">Rudra Immigration</h2>
             <p className="text-sm mt-2 text-gray-400">
               Your trusted partner for global visa and immigration services.
             </p>
@@ -48,7 +48,7 @@ const Footer = () => {
 
         {/* Copyright Section */}
         <div className="text-center mt-10 border-t border-gray-700 pt-4 text-gray-400 text-sm">
-          © {new Date().getFullYear()} VisaPro Consultancy. All Rights Reserved.
+          © {new Date().getFullYear()} Rudra Immigration. All Rights Reserved.
         </div>
       </div>
     </footer>

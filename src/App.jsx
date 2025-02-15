@@ -7,16 +7,13 @@ import Services from './Pages/Services/Services';
 import Exams from './Pages/Exams';
 import ExamDetail from './Components/Exams/ExamDetail';
 import Chatbot from './Components/Chatbot/Chatbot';
-import { AuthProvider } from "./context/AuthContext";
 import ProtectedRoute from "./Components/ProtectedRoute";
 
 import Dashboard from './Components/Dashboard';
-import AuthForm from './Pages/Auth/AuthForm';
 
 function App() {
 
   return (
-    <AuthProvider>
 
     <BrowserRouter>
       <Routes>
@@ -26,7 +23,6 @@ function App() {
       <Route path="/contact" element={<Contact/>} />
       <Route path="/exams" element={<Exams />} />
       <Route path="/exams/:examId" element={<ExamDetail />} />
-      <Route path="/auth" element={<AuthForm/>} />
           <Route
             path="/dashboard"
             element={
@@ -38,7 +34,6 @@ function App() {
       </Routes>
       <Chatbot/>,
     </BrowserRouter>
-        </AuthProvider>
 
   )
 }

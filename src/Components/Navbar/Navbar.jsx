@@ -12,29 +12,22 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link to="/" className="text-2xl font-bold text-blue-600">
-              VisaPro
+              Rudra Immigration
             </Link>
           </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
             <Link to="/" className="text-gray-700 hover:text-blue-600">Home</Link>
+            <Link to="/exams" className="text-gray-700 hover:text-blue-600">Exams</Link>
             <Link to="/services" className="text-gray-700 hover:text-blue-600">Services</Link>
             <Link to="/about" className="text-gray-700 hover:text-blue-600">About</Link>
             <Link to="/contact" className="text-gray-700 hover:text-blue-600">Contact</Link>
-            <Link to="/exams" className="text-gray-700 hover:text-blue-600">Exams</Link>
 
           </div>
 
           {/* Contact Button */}
-          <div className="hidden md:block">
-            <Link
-              to="/Auth"
-              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
-            >
-              Signin
-            </Link>
-          </div>
+         
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
