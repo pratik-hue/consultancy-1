@@ -7,8 +7,8 @@ import { FaArrowRight } from "react-icons/fa";
 // Import exam images
 import ielts from "../assets/ielts.png";
 import toefl from "../assets/toefl.jpg";
-import gre from "../assets/gre.jpg";
-import sat from "../assets/sat.jpg";
+import duolingo from "../assets/sat.jpg";
+import pte from "../assets/pte.jpg";
 import examBanner from "../assets/exam.jpg";
 
 const exams = [
@@ -27,18 +27,18 @@ const exams = [
     link: "/exams/toefl",
   },
   {
-    id: "gre",
-    name: "GRE",
-    description: "Ace verbal, quantitative & analytical skills for top universities.",
-    image: gre,
-    link: "/exams/gre",
+    id: "duolingo",
+    name: "DUOLINGO",
+    description: "A modern and adaptive English proficiency test for global success.",
+    image: duolingo,
+    link: "/exams/duolingo",
   },
   {
-    id: "sat",
-    name: "SAT",
-    description: "Score high and boost your college admission chances.",
-    image: sat,
-    link: "/exams/sat",
+    id: "pte",
+    name: "PTE",
+    description: "Fast and fair English test trusted for work, study, and migration.",
+    image: pte,
+    link: "/exams/pte",
   },
 ];
 
@@ -111,6 +111,39 @@ const Exams = () => {
           ))}
         </div>
       </div>
+       {/* Call-to-Action Section */}
+            <section className="py-16 bg-gray-100 text-center">
+              <div className="max-w-4xl mx-auto px-6">
+                <motion.h2
+                  className="text-3xl font-bold"
+                  initial={{ opacity: 0, y: -20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.8 }}
+                >
+                  Get In Touch with Our Experts
+                </motion.h2>
+                <motion.p
+                  className="mt-4 text-lg"
+                  initial={{ opacity: 0, y: -10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                >
+                  Let us assist you in taking the next step toward your dream destination. Our experts are here to guide you!
+                </motion.p>
+                <motion.a
+                  href="/contact"
+                  className="mt-6 inline-block px-6 py-3 bg-white text-blue-600 font-semibold rounded-lg shadow-md hover:bg-gray-100 transition duration-300"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.3 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                >
+                  Contact Us
+                </motion.a>
+              </div>
+            </section>
     </DefaultLayout>
   );
 };

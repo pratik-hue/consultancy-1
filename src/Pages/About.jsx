@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import DefaultLayout from "../../Components/DefaultLayout";
+import DefaultLayout from "../Components/DefaultLayout";
 import { FaGlobe, FaCheckCircle, FaHeadset } from "react-icons/fa";
-import examBanner from "../../assets/about.jpg"; // Adjust the path as needed
-import we from "../../assets/we.jpg"; // Adjust the path as needed
+import examBanner from "../assets/about.jpg"; // Adjust the path as needed
+import we from "../assets/we.jpg"; // Adjust the path as needed
 
 const About = () => {
   return (

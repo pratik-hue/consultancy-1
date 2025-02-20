@@ -7,32 +7,34 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
-import canadaImg from "../../assets/canada.jpg";
-import australiaImg from "../../assets/australia.jpg";
-import ukImg from "../../assets/uk.jpg";
-import usImg from "../../assets/us.jpg";
-import germanyImg from "../../assets/us.jpg";
-import franceImg from "../../assets/us.jpg";
-import italyImg from "../../assets/us.jpg";
-import singaporeImg from "../../assets/us.jpg";
-import newzealandImg from "../../assets/us.jpg";
-import dubaiImg from "../../assets/us.jpg";
+import canadaImg from "../assets/canada.jpg";
+import australiaImg from "../assets/australia.jpg";
+import ukImg from "../assets/uk.jpg";
+import usImg from "../assets/us.jpg";
+import germanyImg from "../assets/germany.jpg";
+import franceImg from "../assets/france.jpg";
+import italyImg from "../assets/italy.jpg";
+import singaporeImg from "../assets/singapore.jpg";
+import newzealandImg from "../assets/newzealand.jpg";
+import dubaiImg from "../assets/dubai.jpg";
 
 const destinations = [
-  { name: "Canada", image: canadaImg, description: "Explore visa options for students, professionals, and families." },
-  { name: "Australia", image: australiaImg, description: "Opportunities for skilled workers, students, and tourists." },
-  { name: "United Kingdom", image: ukImg, description: "Learn about working, studying, and living in the UK." },
-  { name: "United States", image: usImg, description: "Explore visa options for various categories and programs." },
-  { name: "Germany", image: germanyImg, description: "Work, study, or settle in Germany with the right visa." },
-  { name: "France", image: franceImg, description: "Discover visa opportunities in the heart of Europe." },
-  { name: "Italy", image: italyImg, description: "Live and work in Italy with various visa categories." },
-  { name: "Singapore", image: singaporeImg, description: "Explore opportunities in one of Asia’s financial hubs." },
-  { name: "New Zealand", image: newzealandImg, description: "Student and work visa opportunities in New Zealand." },
-  { name: "Dubai", image: dubaiImg, description: "Business, work, and tourist visas for Dubai and UAE." },
+  {id:"1", name: "Canada", image: canadaImg, description: "Explore visa options for students, professionals, and families." },
+  { id:"2",name: "Australia", image: australiaImg, description: "Opportunities for skilled workers, students, and tourists." },
+  { id:"3",name: "United Kingdom", image: ukImg, description: "Learn about working, studying, and living in the UK." },
+  { id:"4",name: "United States", image: usImg, description: "Explore visa options for various categories and programs." },
+  { id:"5",name: "Germany", image: germanyImg, description: "Work, study, or settle in Germany with the right visa." },
+  { id:"6",name: "France", image: franceImg, description: "Discover visa opportunities in the heart of Europe." },
+  { id:"7",name: "Italy", image: italyImg, description: "Live and work in Italy with various visa categories." },
+  { id:"8",name: "Singapore", image: singaporeImg, description: "Explore opportunities in one of Asia’s financial hubs." },
+  { id:"9",name: "New Zealand", image: newzealandImg, description: "Student and work visa opportunities in New Zealand." },
+  { id:"10",name: "Dubai", image: dubaiImg, description: "Business, work, and tourist visas for Dubai and UAE." },
 ];
 
 const UniqueDestinationCards = () => {
+  const navigate = useNavigate(); // Initialize navigate function
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" }); // Detect when component is in view
 
@@ -88,10 +90,10 @@ const UniqueDestinationCards = () => {
 
                   {/* Learn More Button */}
                   <motion.button
-                    className="mt-4 px-6 py-2 bg-blue-600 text-white font-semibold rounded-full flex items-center transition-transform duration-300"
-                    whileHover={{ scale: 1.1 }}
-                  >
-                    Learn More
+                                     className="mt-4 px-6 py-2 bg-blue-600 text-white font-semibold rounded-full flex items-center transition-transform duration-300"
+                                     onClick={() => navigate(`/destination/${item.name.toLowerCase()}`)}
+                                     >
+                                     Learn More
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </motion.button>
                 </div>

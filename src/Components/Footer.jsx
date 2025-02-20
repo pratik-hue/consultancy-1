@@ -39,7 +39,7 @@ const Footer = () => {
           <div>
             <h2 className="text-lg font-semibold">Contact Us</h2>
             <ul className="mt-2 text-gray-400 space-y-2">
-              <li>Email: support@visapro.com</li>
+              <li>Email: support@Rudra.com</li>
               <li>Phone: +1 234 567 890</li>
               <li>Address: 123 Main Street, City, Country</li>
             </ul>
